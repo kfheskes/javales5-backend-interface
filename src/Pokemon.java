@@ -17,6 +17,8 @@ public abstract class Pokemon {
         this.type = type;
     }
 
+
+
     public String getName(){
         return name;
     }
@@ -41,7 +43,5 @@ public abstract class Pokemon {
     public String getType() {
         return type;
     }
-
-
 
 }

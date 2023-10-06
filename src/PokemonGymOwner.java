@@ -2,10 +2,14 @@ import java.util.List;
 
 public class PokemonGymOwner {
 
+    private final List<Pokemon> pokemons;
     public String town;
     public String name;
 
-    public PokemonGymOwner(String brock, String pewterCity, List<Pokemon> pokemons) {
+    public PokemonGymOwner(String name, String town, List<Pokemon> pokemons) {
+        this.pokemons = pokemons;
+        this.name = name;
+        this.town = town;
 
     }
 
