@@ -61,6 +61,32 @@ public class GrassPokemon extends Pokemon{
 
         switch (enemy.getType()) {
             case "electric" -> {
+                System.out.println(enemy.getName() + " loses 25 hp" + name.getName() +"gets 25 hp");
+                enemy.setHp(enemy.getHp() - 25);
+                name.setHp(name.getHp() + 25);
+            } case "fire" -> {
+                System.out.println(enemy.getName() + " loses 20 hp" + name.getName() +"gets 20 hp");
+                enemy.setHp(enemy.getHp() - 20);
+                name.setHp(name.getHp() + 20);
+            } case "water" -> {
+                System.out.println(enemy.getName() + " loses 15 hp" + name.getName() +"gets 15 hp");
+                enemy.setHp(enemy.getHp() - 15);
+                name.setHp(name.getHp() + 15);
+            } case "grass" -> {
+                System.out.println(enemy.getName() + " loses 10 hp" + name.getName() +"gets 10 hp");
+                enemy.setHp(enemy.getHp() - 10);
+                name.setHp(name.getHp() + 10);
+            } default -> System.out.println("Onbekende type vijand: " + getType());
+        }
+        System.out.println(name.getName() + " has " + name.getHp() + " hp left.");
+        System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left.");
+    }
+
+    public void leaveBlade(Pokemon name, Pokemon enemy) {
+        System.out.println(name.getName() + " attacks" + enemy.getName() + " with a LeaveBlade");
+
+        switch (enemy.getType()) {
+            case "electric" -> {
                 System.out.println(enemy.getName() + " loses 25 hp");
                 enemy.setHp(enemy.getHp() - 25);
             } case "fire" -> {
@@ -77,6 +103,5 @@ public class GrassPokemon extends Pokemon{
         System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left.");
     }
 
-    public void leaveBlade(Pokemon name, Pokemon enemy) {
     }
-}
+

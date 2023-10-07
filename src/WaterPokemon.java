@@ -16,14 +16,90 @@ public class WaterPokemon extends Pokemon {
     }
 
     public void surf(Pokemon name, Pokemon enemy) {
+        System.out.println(name.getName() + " attacks" + enemy.getName() + " with a Surf");
+
+        switch (enemy.getType()) {
+            case "fire" -> {
+                System.out.println(enemy.getName() + " loses 45 hp");
+                enemy.setHp(enemy.getHp() - 45);
+            } case "electric" -> {
+                System.out.println(enemy.getName() + " loses 30 hp");
+                enemy.setHp(enemy.getHp() - 30);
+            } case "grass" -> {
+                System.out.println(enemy.getName() + " loses 25 hp");
+                enemy.setHp(enemy.getHp() - 25);
+            } case "water" -> {
+                System.out.println(enemy.getName() + " loses 15 hp");
+                enemy.setHp(enemy.getHp() - 15);
+            } default -> System.out.println("Onbekende type vijand: " + getType());
+        }
+        System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left.");
     }
+
 
     public void hydroPump(Pokemon name, Pokemon enemy) {
+        System.out.println(name.getName() + " attacks" + enemy.getName() + " with a HydroPump");
+
+        switch (enemy.getType()) {
+            case "fire" -> {
+                System.out.println(enemy.getName() + " loses 40 hp");
+                enemy.setHp(enemy.getHp() - 35);
+            } case "electric" -> {
+                System.out.println(enemy.getName() + " loses 30 hp");
+                enemy.setHp(enemy.getHp() - 30);
+            } case "grass" -> {
+                System.out.println(enemy.getName() + " loses 25 hp");
+                enemy.setHp(enemy.getHp() - 25);
+            } case "water" -> {
+                System.out.println(enemy.getName() + " loses 15 hp");
+                enemy.setHp(enemy.getHp() - 20);
+            } default -> System.out.println("Onbekende type vijand: " + getType());
+        }
+        System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left.");
     }
+
 
     public void hydroCanon(Pokemon name, Pokemon enemy) {
+        System.out.println(name.getName() + " attacks" + enemy.getName() + " with a HydroCanon");
+
+        switch (enemy.getType()) {
+            case "fire" -> {
+                System.out.println(enemy.getName() + " loses 25 hp");
+                enemy.setHp(enemy.getHp() - 25);
+            } case "electric" -> {
+                System.out.println(enemy.getName() + " loses 20 hp");
+                enemy.setHp(enemy.getHp() - 20);
+            } case "grass" -> {
+                System.out.println(enemy.getName() + " loses 15 hp");
+                enemy.setHp(enemy.getHp() - 15);
+            } case "water" -> {
+                System.out.println(enemy.getName() + " loses 10 hp");
+                enemy.setHp(enemy.getHp() - 10);
+            } default -> System.out.println("Onbekende type vijand: " + getType());
+        }
+        System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left.");
     }
 
+
     public void rainDance(Pokemon name, Pokemon enemy) {
+        System.out.println(name.getName() + " attacks" + enemy.getName() + " with a RainDance");
+
+        switch (enemy.getType()) {
+            case "fire" -> {
+                System.out.println(enemy.getName() + " loses 35 hp");
+                enemy.setHp(enemy.getHp() - 35);
+            } case "electric" -> {
+                System.out.println( " has no effect on" + enemy.getName());
+                enemy.setHp(enemy.getHp());
+            } case "grass" -> {
+                System.out.println(enemy.getName() + " gets 25 hp" );
+                enemy.setHp(enemy.getHp() + 25);
+            } case "water" -> {
+                System.out.println(enemy.getName() + " loses 15 hp");
+                enemy.setHp(enemy.getHp() - 15);
+            } default -> System.out.println("Onbekende type vijand: " + getType());
+        }
+        System.out.println(enemy.getName() + " has " + enemy.getHp() + " hp left.");
     }
-}
+    }
+
