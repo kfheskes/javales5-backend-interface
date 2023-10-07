@@ -17,7 +17,11 @@ public abstract class Pokemon {
         this.type = type;
     }
 
-
+        public void getFood (Pokemon name){
+            System.out.println(name.getName() + "gets food ");
+            name.setHp(name.getHp() + 15);
+            System.out.println(getName() + " gets 15 hp");
+        }
 
     public String getName(){
         return name;
