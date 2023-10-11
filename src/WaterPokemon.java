@@ -15,6 +15,11 @@ public class WaterPokemon extends Pokemon {
         return attacks;
     }
 
+    public void getFood (Pokemon name){
+        System.out.println(name.getName() + "gets food ");
+        name.setHp(name.getHp() + 15);
+        System.out.println(getName() + " gets 15 hp");
+    }
     public void surf(Pokemon name, Pokemon enemy) {
         System.out.println(name.getName() + " attacks" + enemy.getName() + " with a Surf");
 

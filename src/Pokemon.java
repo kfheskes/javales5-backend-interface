@@ -16,12 +16,16 @@ public abstract class Pokemon {
         this.sound = sound;
         this.type = type;
     }
-
-        public void getFood (Pokemon name){
-            System.out.println(name.getName() + "gets food ");
-            name.setHp(name.getHp() + 15);
-            System.out.println(getName() + " gets 15 hp");
+    
+    public void throwFood(String foodType) {
+        if (foodType.equals(type)) {
+            System.out.println(getName() + " received a boost by eating " + getFood());
+            setHp(getHp() + 15);
+            System.out.println("New HP for " + getName() + " is " + getHp());
+        } else {
+            System.out.println(getName() + " doesn't like this food!");
         }
+    }
 
     public String getName(){
         return name;
